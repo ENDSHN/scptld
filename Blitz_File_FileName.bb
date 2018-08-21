@@ -88,3 +88,6 @@ Function File_SplitAfterChar$(fileName$, char$)
 	Return afterChar$
 	
 End Function
+;~IDEal Editor Parameters:
+;~F#19#25#36#42#4B
+;~C#Blitz3D

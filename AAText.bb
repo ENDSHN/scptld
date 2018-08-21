@@ -333,5 +333,5 @@ Function AALoadFont%(file$="Tahoma", height=13, bold=0, italic=0, underline=0, A
 End Function
 
 ;~IDEal Editor Parameters:
-;~F#9#19#3F#4B#50#63#6D#7E#88#CB
+;~F#8#1A#40#4C#51#66#70#81#8B#DA
 ;~C#Blitz3D

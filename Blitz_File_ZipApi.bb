@@ -1204,5 +1204,8 @@ End Function
 Function ZIPAPI_Date_Dispose(this.ZIPAPI_Date)
 	Delete this
 End Function
+
 ;~IDEal Editor Parameters:
+;~F#E9#104#123#14F#17C#185#1A5#1F6#23C#25D#266#26F#291#2B7#2D3#2E9#2F3#31F#33C#348
+;~F#35D#37F#3A9#3CD#3EE#414#423#42F#43B#449#455#47A#483#49B#4B3
 ;~C#Blitz3D

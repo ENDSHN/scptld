@@ -175,7 +175,6 @@ End Function
 
 
 
-
 ;~IDEal Editor Parameters:
-;~F#31#48
+;~F#24#31#48#6A#72#7F
 ;~C#Blitz3D

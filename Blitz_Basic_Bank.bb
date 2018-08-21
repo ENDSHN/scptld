@@ -92,3 +92,6 @@ Function DumpBank(bankHandle, rowSize = 16)
 	DebugLog dumpString + "   " + ascString
 	
 End Function
+;~IDEal Editor Parameters:
+;~F#10#28#45
+;~C#Blitz3D

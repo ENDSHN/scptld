@@ -883,5 +883,5 @@ End Function
 
 
 ;~IDEal Editor Parameters:
-;~F#B#1E
+;~F#B#1E#72#14E#168#1B4#1DF#252#2E4#318
 ;~C#Blitz3D

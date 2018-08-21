@@ -66,3 +66,7 @@ KeyName(203)="Left"
 KeyName(205)="Right"
 KeyName(208)="Down"
 ;[End Block]
+
+;~IDEal Editor Parameters:
+;~F#0
+;~C#Blitz3D
