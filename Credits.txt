@@ -1,4 +1,42 @@
 ﻿
+*TLD-Boi Programmers
+
+		Manuel Luxa ("Manuel | Benuel")
+		Shaun Gaylard ("ENDSHN")
+
+
+*TLD-Boi Label Textures
+
+		Manuel Luxa (SCP-009 Lable)
+		Elan S. (SCP-009 Lable)
+		Commander Wasp (SCP-999 Lable)
+
+
+*TLD-Boi Other textures
+
+		Manuel L. ("Manuel | Benuel)
+		Shaun Gaylard ("ENDSHN")
+		Elan S.
+
+
+*TLD-Boi 3D Modellers / Mappers
+
+		Manuel Luxa ("Manuel | Benuel)
+		Shaun Gaylard ("ENDSHN")
+		Elan S.
+
+
+*TLD-Boi Sounds Effects and Music
+
+		Manuel Luxa ("Manuel | Benuel)
+		Shaun Gaylard ("ENDSHN")
+		Leonard ("SylmiX")
+		Killerpez1093 (SCP 999 Voice & Music)
+		Break
+		NCM Epic Music Ender Guney (YouTube)
+		SCP: Secret Laboratory
+
+
 *Programmers
 
 		Joonas Rikkonen ("Regalis")
@@ -17,16 +55,15 @@
 		Apocryphos
 		Atomicsneak
 		Brandon Smith
-		EternalError
 		GamerEntitlement
 		Hakkla
-		Ivan Mikhailov ("Redbull.Ivan")
 		James Bear ("Moonsaber")
 		Kenneth Crooker
 		Lionel Ruskin ("Cridone")
 		Micro
 		Night
 		Prosth
+		Ivan Mikhailov ("Redbull.Ivan")
 		TheKMan
 		Reilly Grindle ("Mirocaine")
 		SaitoFox
@@ -76,7 +113,6 @@
 		Caleb Yu ("Omniary")
 		KyoteeWilliams
 		Orgil Pount ("Destructoid")
-		Pavel Lvovich Gorfunkel ("-Mark-")
 		Shadowscale48
 		Shaun Gaylard ("ENDSHN")
 		Vladislav Borisevich ("Vane Brain")
@@ -96,7 +132,6 @@
 
 		Christian Rieß
 		Emil215p
-		Flipsy
 		Inclination
 		LordDeathv11
 		Onemario1234
