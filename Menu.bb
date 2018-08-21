@@ -122,10 +122,6 @@ Function UpdateMainMenu()
 	
 	DrawImage(MenuText, GraphicWidth / 2 - ImageWidth(MenuText) / 2, GraphicHeight - 20 * MenuScale - ImageHeight(MenuText))
 	
-	If GraphicWidth > 1240 * MenuScale Then
-		DrawTiledImageRect(MenuWhite, 0, 5, 512, 7 * MenuScale, 985.0 * MenuScale, 407.0 * MenuScale, (GraphicWidth - 1240 * MenuScale) + 300, 7 * MenuScale)
-	EndIf
-	
 	If (Not MouseDown1)
 		OnSliderID = 0
 	EndIf
@@ -2631,6 +2627,6 @@ End Function
 
 
 ;~IDEal Editor Parameters:
-;~F#38#463#526#538#542#575#650#663#680#687#6A2#6B6#6D7#6EF#720#751#777#79D#7BA#7CB
-;~F#7E3#880#8C7#8DB#90F#94A#98C#9E0#A16
+;~F#100#196#223#3F9#45F#522#534#53E#571#64C#65F#67C#683#69E#6B2#6D3#6EB#71C#74D#773
+;~F#799#7B6#7C7#7DF#87C#8C3#8D7#90B#946#988#9DC#A12
 ;~C#Blitz3D
