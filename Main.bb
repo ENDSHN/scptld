@@ -8,13 +8,54 @@
 ;    See Credits.txt for a list of contributors
 
 Local InitErrorStr$ = ""
-;If FileSize("bb_fmod.dll")=0 Then InitErrorStr=InitErrorStr+ "bb_fmod.dll"+Chr(13)+Chr(10)
+If FileSize("FreeImage.dll")=0 Then InitErrorStr=InitErrorStr+ "FreeImage.dll"+Chr(13)+Chr(10)
 If FileSize("fmod.dll")=0 Then InitErrorStr=InitErrorStr+ "fmod.dll"+Chr(13)+Chr(10)
 If FileSize("zlibwapi.dll")=0 Then InitErrorStr=InitErrorStr+ "zlibwapi.dll"+Chr(13)+Chr(10)
 
 If Len(InitErrorStr)>0 Then
 	RuntimeError "The following DLLs were not found in the game directory:"+Chr(13)+Chr(10)+Chr(13)+Chr(10)+InitErrorStr
 EndIf
+
+;FreeImage constants
+;[Block]
+Const FIF_UNKNOWN = -1
+Const FIF_BMP = 0
+Const FIF_ICO = 1
+Const FIF_JPEG = 2
+Const FIF_JNG = 3
+Const FIF_KOALA = 4
+Const FIF_LBM = 5
+Const FIF_IFF = FIF_LBM
+Const FIF_MNG = 6
+Const FIF_PBM = 7
+Const FIF_PBMRAW = 8
+Const FIF_PCD = 9
+Const FIF_PCX = 10
+Const FIF_PGM = 11
+Const FIF_PGMRAW = 12
+Const FIF_PNG = 13
+Const FIF_PPM = 14
+Const FIF_PPMRAW = 15
+Const FIF_RAS = 16
+Const FIF_TARGA = 17
+Const FIF_TIFF = 18
+Const FIF_WBMP = 19
+Const FIF_PSD = 20
+Const FIF_CUT = 21
+Const FIF_XBM = 22
+Const FIF_XPM = 23
+Const FIF_DDS = 24
+Const FIF_GIF = 25
+Const FIF_HDR = 26
+Const FIF_FAXG3	= 27
+Const FIF_SGI = 28
+Const FIF_EXR = 29
+Const FIF_J2K = 30
+Const FIF_JP2 = 31
+Const FIF_PFM = 32
+Const FIF_PICT = 33
+Const FIF_RAW = 34
+;[End Block]
 
 Include "FMod.bb"
 
@@ -265,6 +306,12 @@ Global KEY_INV = GetINIInt(OptionFile, "binds", "Inventory key")
 Global KEY_CROUCH = GetINIInt(OptionFile, "binds", "Crouch key")
 Global KEY_SAVE = GetINIInt(OptionFile, "binds", "Save key")
 Global KEY_CONSOLE = GetINIInt(OptionFile, "binds", "Console key")
+
+Global KEY_SCREENSHOT = GetINIInt(OptionFile, "binds", "Screenshot key")
+Global ScreenshotCount% = 1
+While FileType("Screenshots\Screenshot"+ScreenshotCount%+".png")=1
+	ScreenshotCount%=ScreenshotCount%+1
+Wend
 
 Global MouseSmooth# = GetINIFloat(OptionFile,"options", "mouse smoothing", 1.0)
 
@@ -2871,6 +2918,8 @@ Repeat
 			ShouldPlay = 11
 		EndIf
 		UpdateMainMenu()
+		
+		UpdateAchievementMsg()
 	Else
 		UpdateStreamSounds()
 		
@@ -3349,6 +3398,31 @@ Repeat
 	EntityFX fresize_image,1
 	EntityBlend fresize_image,1
 	EntityAlpha fresize_image,1.0
+	
+	Local x%,y%
+	If KeyHit(KEY_SCREENSHOT) Then
+		If FileType("Screenshots\")<>2 Then
+			CreateDir("Screenshots")
+		EndIf
+		Local screenshot = FI_Allocate(RealGraphicWidth,RealGraphicHeight,24,$FF0000,$00FF00,$0000FF)
+		Local bank = CreateBank(RealGraphicWidth*RealGraphicHeight*3)
+		LockBuffer(BackBuffer())
+		For x = 0 To RealGraphicWidth-1
+			For y = 0 To RealGraphicHeight-1
+				Local pixel = ReadPixelFast(x,y,BackBuffer())
+				PokeByte(bank,(y*(RealGraphicWidth*3))+(x*3),(pixel Shr 0) And $FF)
+				PokeByte(bank,(y*(RealGraphicWidth*3))+(x*3)+1,(pixel Shr 8) And $FF)
+				PokeByte(bank,(y*(RealGraphicWidth*3))+(x*3)+2,(pixel Shr 16) And $FF)
+			Next
+		Next
+		UnlockBuffer(BackBuffer())
+		Local fibuffer% = FI_ConvertFromRawBits%(bank,RealGraphicWidth,RealGraphicHeight,RealGraphicWidth*3,24,$FF0000,$00FF00,$0000FF,True)
+		FI_Save(FIF_PNG,fibuffer,"Screenshots\Screenshot"+ScreenshotCount+".png",0)
+		FI_Unload(fibuffer%)
+		FreeBank bank
+		CreateAchievementMsg(999,"Screenshot Taken - Screenshot"+ScreenshotCount+".png","Screenshots\Screenshot"+ScreenshotCount+".png")
+		ScreenshotCount = ScreenshotCount + 1
+	EndIf
 	
 	CatchErrors("Main loop / uncaught")
 	

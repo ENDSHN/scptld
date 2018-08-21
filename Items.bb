@@ -315,6 +315,9 @@ Function InitItemTemplates()
 	
 	it = CreateItemTemplate("Document SCP-427", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc427.jpg", 0.003) : it\sound = 0
 	
+	;The Last D-Boi stuff
+	it = CreateItemTemplate("New Key Card System", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docNKS.png", 0.003) : it\sound = 0
+	
 	For it = Each ItemTemplates
 		If (it\tex<>0) Then
 			If (it\texpath<>"") Then

@@ -110,15 +110,20 @@ Type AchievementMsg
 	Field msgx#
 	Field msgtime#
 	Field msgID%
+	Field customIMG%
 End Type
 
-Function CreateAchievementMsg.AchievementMsg(id%,txt$)
+Function CreateAchievementMsg.AchievementMsg(id%,txt$,customIMG$="")
 	Local amsg.AchievementMsg = New AchievementMsg
 	
 	amsg\achvID = id
 	amsg\txt = txt
 	amsg\msgx = 0.0
 	amsg\msgtime = FPSfactor2
+	If customIMG<>""
+		amsg\customIMG = LoadImage_Strict(customIMG)
+		amsg\customIMG = ResizeImage2(amsg\customIMG,Int(ImageWidth(amsg\customIMG)/(64.0/3.0)),Int(ImageHeight(amsg\customIMG)/(64.0/3.0)))
+	EndIf
 	amsg\msgID = CurrAchvMSGID
 	CurrAchvMSGID = CurrAchvMSGID + 1
 	
@@ -145,13 +150,24 @@ Function UpdateAchievementMsg()
 			Next
 			DrawFrame(x,y,width,height)
 			Color 0,0,0
-			Rect(x+10*scale,y+10*scale,64*scale,64*scale,True)
-			DrawImage(AchvIMG(amsg\achvID),x+10*scale,y+10*scale)
-			Color 50,50,50
-			Rect(x+10*scale,y+10*scale,64*scale,64*scale,False)
+			If amsg\customIMG=0 Then
+				Rect(x+10*scale,y+10*scale,64*scale,64*scale,True)
+				DrawImage(AchvIMG(amsg\achvID),x+10*scale,y+10*scale)
+				Color 50,50,50
+				Rect(x+10*scale,y+10*scale,64*scale,64*scale,False)
+			Else
+				Rect(x+10*scale,y+((height/2)-(ImageHeight(amsg\customIMG)/2)),ImageWidth(amsg\customIMG),ImageHeight(amsg\customIMG),True)
+				DrawImage(amsg\customIMG,x+10*scale,y+((height/2)-(ImageHeight(amsg\customIMG)/2)))
+				Color 50,50,50
+				Rect(x+10*scale,y+((height/2)-(ImageHeight(amsg\customIMG)/2)),ImageWidth(amsg\customIMG),ImageHeight(amsg\customIMG),False)
+			EndIf
 			Color 255,255,255
 			AASetFont Font1
-			RowText("Achievement Unlocked - "+amsg\txt,x+84*scale,y+10*scale,width-94*scale,y-20*scale)
+			If amsg\customIMG=0 Then
+				RowText("Achievement Unlocked - "+amsg\txt,x+84*scale,y+10*scale,width-94*scale,y-20*scale)
+			Else
+				RowText(amsg\txt,x+84*scale,y+10*scale,width-94*scale,y-20*scale)
+			EndIf
 			If amsg\msgtime > 0.0 And amsg\msgtime < 70*7
 				amsg\msgtime = amsg\msgtime + FPSfactor2
 				If amsg\msgx > -width%
@@ -167,6 +183,9 @@ Function UpdateAchievementMsg()
 				EndIf
 			EndIf
 		Else
+			If amsg\customIMG<>0 Then
+				FreeImage amsg\customIMG
+			EndIf
 			Delete amsg
 		EndIf
 	Next

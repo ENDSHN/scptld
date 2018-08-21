@@ -4019,6 +4019,10 @@ Function FillRoom(r.Rooms)
 			
 			;3384,510,2400
 			CreateDevilEmitter(r\x+3384.0*RoomScale,r\y+510.0*RoomScale,r\z+2400.0*RoomScale,r,1,4)
+			
+			it = CreateItem("New Key Card System", "paper", r\x+250.0*RoomScale,r\y+150.0*RoomScale,r\z-630.0*RoomScale)
+			RotateEntity(it\collider,0,r\angle+45,0)
+			EntityParent(it\collider,r\obj)
 			;[End Block]
 		Case "room2scps"
 			;[Block]
