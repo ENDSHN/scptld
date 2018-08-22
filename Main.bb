@@ -3404,7 +3404,6 @@ Repeat
 		If FileType("Screenshots\")<>2 Then
 			CreateDir("Screenshots")
 		EndIf
-		Local screenshot = FI_Allocate(RealGraphicWidth,RealGraphicHeight,24,$FF0000,$00FF00,$0000FF)
 		Local bank = CreateBank(RealGraphicWidth*RealGraphicHeight*3)
 		LockBuffer(BackBuffer())
 		For x = 0 To RealGraphicWidth-1

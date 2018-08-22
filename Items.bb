@@ -317,6 +317,7 @@ Function InitItemTemplates()
 	
 	;The Last D-Boi stuff
 	it = CreateItemTemplate("New Key Card System", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docNKS.png", 0.003) : it\sound = 0
+	it = CreateItemTemplate("New Entrance Zone Doors", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docMSP2.png", 0.003) : it\sound = 0
 	
 	For it = Each ItemTemplates
 		If (it\tex<>0) Then
@@ -886,5 +887,5 @@ End Function
 
 
 ;~IDEal Editor Parameters:
-;~F#B#1E#72#14E#168#1B4#1DF#252#2E4#318
+;~F#B#1E#152#16C#1B8#1E3#256#2E8#31C
 ;~C#Blitz3D
