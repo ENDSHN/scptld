@@ -7382,6 +7382,7 @@ Function CreateMap()
 	SetRoom("914", ROOM1, Floor(0.3*Float(Room1Amount[0])),min_pos,max_pos)
 	SetRoom("room1archive",ROOM1,Floor(0.5*Float(Room1Amount[0])),min_pos,max_pos)
 	SetRoom("room205", ROOM1, Floor(0.6*Float(Room1Amount[0])),min_pos,max_pos)
+	SetRoom("room999", ROOM1, Floor(0.2*Float(Room1Amount[0])),min_pos,max_pos)
 	
 	MapRoom(ROOM2C, 0) = "lockroom"
 	
@@ -7432,6 +7433,7 @@ Function CreateMap()
 	
 	MapRoom(ROOM2C, Room2CAmount[0]+Floor(0.5*Float(Room2CAmount[1]))) = "room2cpit"
 	
+	MapRoom(ROOM4, Room4Amount[0]+Floor(0.5*Float(Room4Amount[1]))) = "room009"
 	
 	;zone 3  --------------------------------------------------------------------------------------------------
 	
@@ -8756,8 +8758,8 @@ End Function
 ;~F#CA7#CC6#D6F#DE4#DF3#E2F#E37#E45#E5A#E98#EB7#EC7#EDF#F0C#F1F#F41#F69#FC0#1036#105F
 ;~F#1066#106B#10A3#10DC#10F1#1127#11A7#11C7#1237#1286#12B1#1305#13A0#13A8#13AD#13BD#13CC#1413#1437#1446
 ;~F#1467#1473#147D#1521#1527#1534#1558#156E#157F#15BA#1655#1661#16A6#16B1#16C2#16C7#16D6#16ED#176E#1777
-;~F#1839#1856#185D#1863#1871#1894#18B3#18E6#19E2#1A0F#1A48#1A5D#1B62#1B67#1B77#1E63#1E82#1E89#1EEB#1F92
-;~F#1FBD#1FDE#1FF1#2008#2017#201E#204F#205A#2082#20EA#20FA#2101#210A#2110#211A#2120#2136#214A#2168#2176
-;~F#2196#219D
+;~F#1839#1856#185D#1863#1871#1894#18B3#18E6#19E2#1A0F#1A48#1A5D#1B62#1B67#1B77#1E65#1E84#1E8B#1EED#1F94
+;~F#1FBF#1FE0#1FF3#200A#2019#2020#2051#205C#2084#20EC#20FC#2103#210C#2112#211C#2122#2138#214C#216A#2178
+;~F#2198#219F
 ;~B#1235
 ;~C#Blitz3D
