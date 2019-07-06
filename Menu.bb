@@ -140,7 +140,7 @@ Function UpdateMainMenu()
 			Local txt$
 			Select i
 				Case 0
-					txt = "NEW GAME"
+					txt = "NEW STORY"
 					RandomSeed = ""
 					If temp Then 
 						If Rand(15)=1 Then 
@@ -187,7 +187,7 @@ Function UpdateMainMenu()
 						MainMenuTab = 1
 					EndIf
 				Case 1
-					txt = "LOAD GAME"
+					txt = "LOAD STORY"
 					If temp Then
 						LoadSaveGames()
 						MainMenuTab = 2
@@ -196,7 +196,7 @@ Function UpdateMainMenu()
 					txt = "OPTIONS"
 					If temp Then MainMenuTab = 3
 				Case 3
-					txt = "QUIT"
+					txt = "RUN AWAY"
 					If temp Then
 						;DeInitExt
 						;alDestroy()
@@ -264,7 +264,7 @@ Function UpdateMainMenu()
 				
 				Color(255, 255, 255)
 				AASetFont Font2
-				AAText(x + width / 2, y + height / 2, "NEW GAME", True, True)
+				AAText(x + width / 2, y + height / 2, "NEW STORY", True, True)
 				
 				x = 160 * MenuScale
 				y = y + height + 20 * MenuScale
@@ -374,7 +374,7 @@ Function UpdateMainMenu()
 				
 				AASetFont Font2
 				
-				If DrawButton(x + 420 * MenuScale, y + height + 20 * MenuScale, 160 * MenuScale, 70 * MenuScale, "START", False) Then
+				If DrawButton(x + 420 * MenuScale, y + height + 20 * MenuScale, 160 * MenuScale, 70 * MenuScale, "START STORY", False) Then
 					If CurrSave = "" Then CurrSave = "untitled"
 					
 					If RandomSeed = "" Then
@@ -398,7 +398,7 @@ Function UpdateMainMenu()
 					FlushKeys()
 					FlushMouse()
 					
-					PutINIValue(OptionFile, "options", "intro enabled", IntroEnabled%)
+					PutINIValue(OptionFile, "options", "Story Intro", IntroEnabled%)
 					
 				EndIf
 				
@@ -421,7 +421,7 @@ Function UpdateMainMenu()
 				
 				Color(255, 255, 255)
 				AASetFont Font2
-				AAText(x + width / 2, y + height / 2, "LOAD GAME", True, True)
+				AAText(x + width / 2, y + height / 2, "LOAD STORY", True, True)
 				
 				x = 160 * MenuScale
 				y = y + height + 20 * MenuScale
@@ -462,7 +462,7 @@ Function UpdateMainMenu()
 				EndIf
 				
 				If SaveGameAmount = 0 Then
-					AAText (x + 20 * MenuScale, y + 20 * MenuScale, "No saved games.")
+					AAText (x + 20 * MenuScale, y + 20 * MenuScale, "No saved stories.")
 				Else
 					x = x + 20 * MenuScale
 					y = y + 20 * MenuScale
@@ -1108,7 +1108,7 @@ Function UpdateMainMenu()
 	
 	Color 255,255,255
 	AASetFont ConsoleFont
-	AAText 20,GraphicHeight-30,"v"+VersionNumber
+	AAText 20,GraphicHeight-30,"TLD-B "+VersionNumber
 	
 	;DrawTiledImageRect(MenuBack, 985 * MenuScale, 860 * MenuScale, 200 * MenuScale, 20 * MenuScale, 1200 * MenuScale, 866 * MenuScale, 300, 20 * MenuScale)
 	
@@ -1266,7 +1266,7 @@ Function UpdateLauncher()
 		Color 255,255,255
 		Text LauncherWidth-250,LauncherHeight-70,"Check for"
 		Text LauncherWidth-250,LauncherHeight-50,"updates on"
-		Text LauncherWidth-250,LauncherHeight-30,"launch"
+		Text LauncherWidth-250,LauncherHeight-30,"start"
 		
 		If DrawButton(LauncherWidth - 30 - 90, LauncherHeight - 50 - 55, 100, 30, "LAUNCH", False, False, False) Then
 			GraphicWidth = GfxModeWidths(SelectedGFXMode)
@@ -1276,7 +1276,7 @@ Function UpdateLauncher()
 			Exit
 		EndIf
 		
-		If DrawButton(LauncherWidth - 30 - 90, LauncherHeight - 50, 100, 30, "EXIT", False, False, False) Then End
+		If DrawButton(LauncherWidth - 30 - 90, LauncherHeight - 50, 100, 30, "RUN AWAY", False, False, False) Then End
 		Flip
 	Forever
 	
