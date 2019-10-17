@@ -107,7 +107,7 @@ Function UpdateMainMenu()
 				Case 17
 					MenuStr = "It controls the doors"
 				Case 18
-					MenuStr = "e8m106]af173o+079m895w914"
+					MenuStr = "The last D-BOIIIII Mother Fucker :3"
 				Case 20
 					MenuStr = "It has taken over everything"
 				Case 21
@@ -146,7 +146,7 @@ Function UpdateMainMenu()
 						If Rand(15)=1 Then 
 							Select Rand(13)
 								Case 1 
-									RandomSeed = "NIL"
+									RandomSeed = "TLDB"
 								Case 2
 									RandomSeed = "NO"
 								Case 3
@@ -486,7 +486,7 @@ Function UpdateMainMenu()
 								If SaveGameVersion(i - 1) <> CompatibleNumber And SaveGameVersion(i - 1) <> "1.3.10" Then
 									DrawFrame(x + 280 * MenuScale, y + 20 * MenuScale, 100 * MenuScale, 30 * MenuScale)
 									Color(255, 0, 0)
-									AAText(x + 330 * MenuScale, y + 34 * MenuScale, "Load", True, True)
+									AAText(x + 330 * MenuScale, y + 34 * MenuScale, "Load Story", True, True)
 								Else
 									If DrawButton(x + 280 * MenuScale, y + 20 * MenuScale, 100 * MenuScale, 30 * MenuScale, "Load", False) Then
 										LoadEntities()
@@ -498,7 +498,7 @@ Function UpdateMainMenu()
 									EndIf
 								EndIf
 								
-								If DrawButton(x + 400 * MenuScale, y + 20 * MenuScale, 100 * MenuScale, 30 * MenuScale, "Delete", False) Then
+								If DrawButton(x + 400 * MenuScale, y + 20 * MenuScale, 100 * MenuScale, 30 * MenuScale, "Delete Story", False) Then
 									SaveMSG = SaveGames(i - 1)
 									DebugLog SaveMSG
 									Exit
@@ -510,11 +510,11 @@ Function UpdateMainMenu()
 								Else
 									Color(100, 100, 100)
 								EndIf
-								AAText(x + 330 * MenuScale, y + 34 * MenuScale, "Load", True, True)
+								AAText(x + 330 * MenuScale, y + 34 * MenuScale, "Load Story", True, True)
 								
 								DrawFrame(x + 400 * MenuScale, y + 20 * MenuScale, 100 * MenuScale, 30 * MenuScale)
 								Color(100, 100, 100)
-								AAText(x + 450 * MenuScale, y + 34 * MenuScale, "Delete", True, True)
+								AAText(x + 450 * MenuScale, y + 34 * MenuScale, "Delete Story", True, True)
 							EndIf
 							
 							y = y + 80 * MenuScale

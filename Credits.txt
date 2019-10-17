@@ -1,39 +1,45 @@
 ﻿
 *TLD-Boi Programmers
 
-		Manuel Luxa ("Manuel | Benuel")
+		Manuel L. ("Manuel | NohxuelTV")
 		Shaun Gaylard ("ENDSHN")
 
 
 *TLD-Boi Label Textures
 
-		Manuel Luxa (SCP-009 Lable)
+		Manuel L. (SCP-009 Lable)
 		Elan S. (SCP-009 Lable)
 		Commander Wasp (SCP-999 Lable)
 
 
 *TLD-Boi Other textures
 
-		Manuel L. ("Manuel | Benuel)
+		Manuel L. ("Manuel | NohxuelTV)
 		Shaun Gaylard ("ENDSHN")
 
 
 *TLD-Boi 3D Modellers / Mappers
 
-		Manuel Luxa ("Manuel | Benuel)
+		Manuel L. ("Manuel | NohxuelTV)
 		Shaun Gaylard ("ENDSHN")
 
 
 *TLD-Boi Sounds Effects and Music
 
-		Manuel Luxa ("Manuel | Benuel)
+		Manuel L. ("Manuel | NohxuelTV)
 		Shaun Gaylard ("ENDSHN")
 		Leonard ("SylmiX")
 		Killerpez1093 (SCP 999 Voice & Music)
-		Break
 		NCM Epic Music Ender Guney (YouTube)
 		SCP: Secret Laboratory
 
+*The game is based on the works of the SCP Foundation community.
+
+		SCP-5000 is based on "SCP-5000 Pedo Pet" implemented by "Manuel and ENDSHN"
+		
+		SCP-5001 is based on "Baldi" implemented by "Manuel"
+		
+		SCP-5002 is based on "Carrot, One Piece" implemented by "ENDSHN"
 
 *Programmers
 
