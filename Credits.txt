@@ -1,30 +1,30 @@
 ﻿
-*TLD-Boi Programmers
+*CMS Programmers
 
 		Manuel L. ("Manuel | NohxuelTV")
 		Shaun Gaylard ("ENDSHN")
+		ADMClef
 
 
-*TLD-Boi Label Textures
+*CMS Label Textures
 
 		Manuel L. (SCP-009 Lable)
 		Elan S. (SCP-009 Lable)
 		Commander Wasp (SCP-999 Lable)
 
 
-*TLD-Boi Other textures
+*CMS Other textures
 
 		Manuel L. ("Manuel | NohxuelTV)
 		Shaun Gaylard ("ENDSHN")
 
 
-*TLD-Boi 3D Modellers / Mappers
+*CMS 3D Modellers / Mappers
 
-		Manuel L. ("Manuel | NohxuelTV)
-		Shaun Gaylard ("ENDSHN")
+		ADMClef
 
 
-*TLD-Boi Sounds Effects and Music
+*CMS Sounds Effects and Music
 
 		Manuel L. ("Manuel | NohxuelTV)
 		Shaun Gaylard ("ENDSHN")
@@ -35,7 +35,7 @@
 
 *The game is based on the works of the SCP Foundation community.
 
-		SCP-5000 is based on "SCP-5000 Pedo Pet" implemented by "Manuel and ENDSHN"
+		SCP-5000 is based on "SCP-5000 Pedo Pete" implemented by "Manuel and ENDSHN"
 		
 		SCP-5001 is based on "Baldi" implemented by "Manuel"
 		
