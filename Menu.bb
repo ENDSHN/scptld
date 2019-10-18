@@ -275,7 +275,7 @@ Function UpdateMainMenu()
 				
 				AASetFont Font1
 				
-				AAText (x + 20 * MenuScale, y + 20 * MenuScale, "Name:")
+				AAText (x + 20 * MenuScale, y + 20 * MenuScale, "Your C. Name:")
 				CurrSave = InputBox(x + 150 * MenuScale, y + 15 * MenuScale, 200 * MenuScale, 30 * MenuScale, CurrSave, 1)
 				CurrSave = Left(CurrSave, 15)
 				CurrSave = Replace(CurrSave,":","")
@@ -498,7 +498,7 @@ Function UpdateMainMenu()
 									EndIf
 								EndIf
 								
-								If DrawButton(x + 400 * MenuScale, y + 20 * MenuScale, 100 * MenuScale, 30 * MenuScale, "Delete Story", False) Then
+								If DrawButton(x + 400 * MenuScale, y + 20 * MenuScale, 100 * MenuScale, 30 * MenuScale, "Suicide", False) Then
 									SaveMSG = SaveGames(i - 1)
 									DebugLog SaveMSG
 									Exit
@@ -514,7 +514,7 @@ Function UpdateMainMenu()
 								
 								DrawFrame(x + 400 * MenuScale, y + 20 * MenuScale, 100 * MenuScale, 30 * MenuScale)
 								Color(100, 100, 100)
-								AAText(x + 450 * MenuScale, y + 34 * MenuScale, "Delete Story", True, True)
+								AAText(x + 450 * MenuScale, y + 34 * MenuScale, "Suicide", True, True)
 							EndIf
 							
 							y = y + 80 * MenuScale
@@ -1076,7 +1076,7 @@ Function UpdateMainMenu()
 				AASetFont Font1
 				
 				If SavedMaps(0)="" Then 
-					AAText (x + 20 * MenuScale, y + 20 * MenuScale, "No saved maps. Use the Map Creator to create new maps.")
+					AAText (x + 20 * MenuScale, y + 20 * MenuScale, "No saved Story. Use the Map Creator to create new maps and starts the Story.")
 				Else
 					x = x + 20 * MenuScale
 					y = y + 20 * MenuScale
@@ -1266,7 +1266,7 @@ Function UpdateLauncher()
 		Color 255,255,255
 		Text LauncherWidth-250,LauncherHeight-70,"Check for"
 		Text LauncherWidth-250,LauncherHeight-50,"updates on"
-		Text LauncherWidth-250,LauncherHeight-30,"start"
+		Text LauncherWidth-250,LauncherHeight-30,"Start Game"
 		
 		If DrawButton(LauncherWidth - 30 - 90, LauncherHeight - 50 - 55, 100, 30, "LAUNCH", False, False, False) Then
 			GraphicWidth = GfxModeWidths(SelectedGFXMode)
@@ -1548,7 +1548,7 @@ Function DrawLoading(percent%, shortloading=False)
 		
 		If percent = 100 Then 
 			If firstloop And SelectedLoadingScreen\title <> "CWM" Then PlaySound_Strict LoadTempSound(("SFX\Horror\Horror8.ogg"))
-			AAText(GraphicWidth / 2, GraphicHeight - 50, "PRESS ANY KEY TO CONTINUE", True, True)
+			AAText(GraphicWidth / 2, GraphicHeight - 50, "PRESS SPACE TO CONTINUE", True, True)
 		Else
 			FlushKeys()
 			FlushMouse()
