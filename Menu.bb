@@ -367,7 +367,7 @@ Function UpdateMainMenu()
 					RowText(SelectedDifficulty\description, x+160*MenuScale, y+160*MenuScale, (410-20)*MenuScale, 200)					
 				EndIf
 				
-				If DrawButton(x, y + height + 20 * MenuScale, 160 * MenuScale, 70 * MenuScale, "Load map", False) Then
+				If DrawButton(x, y + height + 20 * MenuScale, 160 * MenuScale, 70 * MenuScale, "Load Story", False) Then
 					MainMenuTab = 4
 					LoadSavedMaps()
 				EndIf
@@ -1106,7 +1106,7 @@ Function UpdateMainMenu()
 		
 	End If
 	
-	Color 255,255,255
+	Color 255,165,0
 	AASetFont ConsoleFont
 	AAText 20,GraphicHeight-30,"TLD-B "+VersionNumber
 	
